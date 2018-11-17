@@ -644,6 +644,7 @@
     <Content Include="Views\Home\CategorySearch.cshtml" />
     <Content Include="Views\Home\TechnologySearch.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Login\GitTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
