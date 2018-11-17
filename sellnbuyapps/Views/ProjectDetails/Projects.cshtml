@@ -1,0 +1,125 @@
+﻿@using PagedList.Mvc
+@model  PagedList.IPagedList<sellnbuyapps.Models.ProjectDetails>
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+
+<style>
+    .ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.pagination li {
+        display: inline;
+    }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+            ul.pagination li a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            ul.pagination li a:hover:not(.active) {
+                background-color: #ddd;
+            }
+</style>
+
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Manage Projects</h2>
+    </div>
+</div>
+<div class="section-wrap">
+
+    <div class="section dashboard-content">
+        <div class="headline filter primary manage-project-header">
+            <h4>Search For Project</h4>
+
+            <div class="search-form">
+
+                @using (Html.BeginForm("Search", "ProjectDetails", FormMethod.Get))
+                {
+                    <input type="text" class="rounded" name="Query" id="search_products" placeholder="Search products here...">
+                    <input type="image" src=@Url.Content("/Content/images/search-icon.png") alt="search-icon" class="project-search-icon">
+                }
+            </div>
+
+        </div>
+
+
+        <div class="product-list grid column4-wrap">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+            <!-- PRODUCT ITEM -->
+                <div class="product-item column">
+                    <!-- PRODUCT PREVIEW ACTIONS -->
+                    <div class="product-preview-actions">
+                        <!-- PRODUCT PREVIEW IMAGE -->
+                        <figure class="product-preview-image">
+                            <img src="@Model[i].screenshot" style="height:150px;width:257px;" alt="Project-image" />
+                        </figure>
+                        <!-- /PRODUCT PREVIEW IMAGE -->
+                        <!-- PRODUCT SETTINGS -->
+                        <div class="product-settings primary dropdown-handle">
+                            <span class="sl-icon icon-settings"></span>
+                        </div>
+                        <!-- /PRODUCT SETTINGS -->
+                        <!-- DROPDOWN -->
+                        <ul class="dropdown small hover-effect closed">
+                            <li class="dropdown-item">
+                                <!-- DP TRIANGLE -->
+                                <div class="dp-triangle"></div>
+                                <!-- DP TRIANGLE -->
+                                <a href="@Url.Action("../Seller/UpdateProject")?Id=@Model[i].Id">Edit</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="@Url.Action("../Seller/ViewProject")?Id=@Model[i].Id">Details</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="@Url.Action("../Seller/DeleteProject")?Id=@Model[i].Id">Delete</a>
+                            </li>
+                        </ul>
+                        <!-- /DROPDOWN -->
+                    </div>
+                    <!-- /PRODUCT PREVIEW ACTIONS -->
+                    <!-- PRODUCT INFO -->
+                    <div class="product-info">
+                        <a href="@Url.Action("SingleProduct")?Id=@Model[i].Id">
+                            <p class="text-header">@Model[i].projectname</p>
+                        </a>
+                        <p class="product-description">@Model[i].features</p>
+                        <a href="shop-gridview-v1.html">
+                            <p class="category primary">@Model[i].technologyname</p>
+                        </a>
+                        <p class="price"><span>$</span>@Model[i].cost</p>
+                    </div>
+                    <!-- /PRODUCT INFO -->
+                </div>
+            <!-- /PRODUCT ITEM -->
+            }
+        </div>
+        <div class="clearfix"></div>
+        <p style="color:dimgray;margin: auto 45%;">@ViewBag.Message</p>
+        @if (Model.PageCount > 1)
+        {
+            <div id="container" style="margin-left: 0px; color: #006180;">
+                <p></p>
+                <p></p>
+                <div class="pagination" style="margin-left: 0px;color: #006180;">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                    of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("Projects", new { page }))
+                </div>
+            </div>
+        }
+    </div>
+</div>

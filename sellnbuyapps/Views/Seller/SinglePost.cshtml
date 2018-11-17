@@ -1,0 +1,125 @@
+﻿@model sellnbuyapps.Models.Home
+
+@{
+    ViewBag.Title = "SinglePost";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Single Post</h2>
+    </div>
+</div>
+<div class="section-wrap">
+    <div class="section">
+
+        <div class="content left">
+            <!-- POST -->
+            <article class="post ">
+                <!-- POST IMAGE -->
+                <div class="post-image">
+                    <figure class="product-preview-image large liquid">
+                        <img src="@Model.screenshot" alt="">
+                    </figure>
+                </div>
+                <!-- /POST IMAGE -->
+                <!-- POST CONTENT -->
+                <div class="post-content with-title">
+                    <p class="text-header big">@Model.projectname</p>
+                    <div class="meta-line">
+
+                        <p class="category primary">Comments & Rating</p>
+
+                        <!-- METADATA -->
+                        <div class="metadata" style="margin: 0 60px 0 0px;">
+                            <!-- META ITEM -->
+                            <div class="meta-item">
+                                <span class="icon-bubble"></span>
+                                <p>@Model.comments</p>
+                            </div>
+                            <!-- /META ITEM -->
+                            <!-- META ITEM -->
+                            <div class="meta-item">
+                                <span class="icon-star"></span>
+                                <p>@Model.rating</p>
+                            </div>
+                            <!-- /META ITEM -->
+                        </div>
+                        <!-- /METADATA -->
+                    </div>
+                    <!-- POST PARAGRAPH -->
+                    <div class="post-paragraph">
+                        <h3 class="post-title">Features</h3>
+                        <p>@Model.features</p>
+                        <h3 class="post-title">
+                            Description
+                        </h3>
+                        <p>@Model.description</p>
+                    </div>
+                    <!-- /POST PARAGRAPH -->
+                    <!-- POST PARAGRAPH -->
+                    <div class="post-paragraph">
+                        <h3 class="post-title">Technology Used</h3>
+                        <p>@Model.technologyname</p>
+                    </div>
+                    <!-- /POST PARAGRAPH -->
+                </div>
+                <!-- /POST CONTENT -->
+                <hr class="line-separator">
+                <!-- SHARE -->
+                <div class="share-links-wrap">
+                    <p class="text-header small">Share this:</p>
+                    <!-- SHARE LINKS -->
+                    <ul class="share-links hoverable">
+                        <li><a href="#" class="fb"></a></li>
+                        <li><a href="#" class="twt"></a></li>
+                        <li><a href="#" class="db"></a></li>
+                        <li><a href="#" class="rss"></a></li>
+                        <li><a href="#" class="gplus"></a></li>
+                    </ul>
+                    <!-- /SHARE LINKS -->
+                </div>
+                <!-- /SHARE -->
+            </article>
+            <!-- /POST -->
+            <!-- BLOG AUTHOR -->
+            <div class="blog-author">
+
+                <figure class="user-avatar medium liquid">
+                    <img src="@Model.profilepicture" alt="" style="height: 100px; width: 100px; margin: -20px 0px 0px -20px;">
+                </figure>
+
+                <p class="text-header">@Model.authorfirstname @Model.authorlastname</p>
+                <p class="timestamp">Post Author</p>
+
+            </div>
+            <!-- /BLOG AUTHOR -->
+            <!-- BLOG COMMENTS -->
+            <div class="blog-comments">
+                <h4 class="section-title">Leave a Comment</h4>
+                <!-- LINE SEPARATOR -->
+                <hr class="line-separator">
+                <!-- /LINE SEPARATOR -->
+                <!-- COMMENTS -->
+                <div class="comment-list">
+
+                    <!-- COMMENT REPLY -->
+                    <div class="comment-wrap " style="padding: 20px 0 0 0;">
+                        <!-- COMMENT REPLY FORM -->
+                        @using (Html.BeginForm())
+                        {
+                            @Html.TextAreaFor(model => model.postcomment, new { htmlAttributes = new { @class = "form-control" } })
+                            <button id="btnSubmit" class="button mid dark" style="margin: 10px 0 10px 0;">
+                                Comment
+                            </button>
+                            <span>@ViewBag.Message</span>
+                        }
+                        <!-- /COMMENT REPLY FORM -->
+                    </div>
+                    <!-- /COMMENT REPLY -->
+                </div>
+                <!-- /COMMENTS -->
+            </div>
+        </div>
+    </div>
+</div>

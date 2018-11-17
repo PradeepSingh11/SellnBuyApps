@@ -1,0 +1,4057 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href=@Url.Content("~/Content/css/vendor/simple-line-icons.css")>
+    <link rel="stylesheet" href=@Url.Content("~/Content/css/vendor/tooltipster.css")>
+    <link rel="stylesheet" href=@Url.Content("~/Content/css/style.css")>
+    @*<link rel="stylesheet" href=@Url.Content("~/Content/css/bootstrap.min.css") />*@
+    <!-- favicon -->
+    <link rel="icon" href=@Url.Content("favicon.ico")>
+    <title>@ViewBag.Title - Sell & Buy Apps</title>
+    @Styles.Render("~/Content/vendor/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header-wrap">
+        <header>
+            <a href=@Url.Content("../Home/Index")>
+                <figure class="logo">
+                    <img src="@Url.Content("/ProjectImages/logo.png")" alt="logo" style="height:60px; width:auto;">
+                </figure>
+            </a>
+
+            <!-- MOBILE MENU HANDLER -->
+            <div class="mobile-menu-handler left primary">
+                <img src="~/Content/images/pull-icon.png" alt="pull-icon">
+            </div>
+            <!-- /MOBILE MENU HANDLER -->
+            <!-- LOGO MOBILE -->
+            <a href=@Url.Content("../Home/Index")>
+                <figure class="logo-mobile">
+                    <img src="~/ProjectImages/Sell n buy logo.png" alt="logo-mobile" style="width:100%; height:auto" />
+                </figure>
+            </a>
+                        <div class="mobile-account-options-handler right secondary">
+                <span class="icon-user"></span>
+            </div>
+            <div class="user-board">
+                <div class="account-information">
+                    <div class="account-cart-quickview">
+                        <a href="@Url.Action("../Home/Cart")">
+                            <span class="icon-present">
+                            </span>
+                            <span class="pin soft-edged secondary"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="account-actions ">
+                    <a href=@Url.Content("../Register/Registration") class="button primary login-logout">Create a Account</a>
+                    <a href=@Url.Content("../Login/Login") class="button secondary login-logout">Log In</a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div id="mobile-menu" class="side-menu left closed">
+      
+        <svg class="svg-plus">
+            <use xlink:href="#svg-plus"></use>
+        </svg>
+        <div class="side-menu-header">
+            <figure class="logo small">
+                <img src="@Url.Content("/ProjectImages/logo.png")" alt="logo" style="height: 60px;width:auto;">
+            </figure>
+        </div>
+        <p class="side-menu-title">Main Links</p>
+        <ul class="dropdown dark hover-effect interactive">
+            <li class="dropdown-item">
+                <a href=@Url.Content("/Home/Index")>Home</a>
+            </li>
+            <li class="dropdown-item interactive">
+                <a href="">
+                    Browse Projects
+                    <svg class="svg-arrow">
+                        <use xlink:href="#svg-arrow"></use>
+                    </svg>
+                </a>
+                <ul class="inner-dropdown">
+                    <li class="inner-dropdown-item">
+                        <p>Categories</p>
+                    </li>
+                   
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=Admin Section">Admin Panel</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=website">Websites</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=school management">School Management</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=hospital management">Hospital Management</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=library management">Library Management</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=web application">Web Applications</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=desktop application">
+                            Desktop Applications
+                        </a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=banking project">Banking Project</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=accounting project">Accounting Projects</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/CategorySearch")?query=E-Commerce">E-Commerce</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <p>Technologies</p>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=Angular.js">Angular.js</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=android">
+                            Android
+                        </a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=asp.net">Asp.Net</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=asp.net mvc">Asp.Net MVC</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=java">
+                            JAVA
+                        </a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=php">PHP</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=python">Python</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=React.js">React.js</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=sql">Sql</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=scala">Scala</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=Magento">Magento</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=WordPress">WordPress</a>
+                    </li>
+                    <li class="inner-dropdown-item">
+                        <a href="@Url.Action("../Home/TechnologySearch")?query=rust">Rust</a>
+                    </li>
+                </ul>
+            </li>
+          
+            @*<li class="dropdown-item">
+                    <a href=@Url.Content("/Home/HTShop")>How To Shop</a>
+                </li>*@
+           <li class="dropdown-item">
+                <a href=@Url.Content("/Home/AboutUs")>About Us</a>
+            </li>
+            <li class="dropdown-item">
+                <a href=@Url.Content("../Register/ContactUs")>Contact Us</a>
+            </li>
+            <li class="dropdown-item">
+                <a href=@Url.Content("../Blog/Index")>Blog</a>
+            </li>
+
+        </ul>
+
+    </div>
+    <div id="account-options-menu" class="side-menu right closed">
+          <svg class="svg-plus">
+            <use xlink:href="#svg-plus"></use>
+        </svg>
+        <ul class="dropdown dark hover-effect" style="margin-top:50px">
+            <li class="dropdown-item">
+                <a href="@Url.Action("../Home/Cart")">
+                    <span class="mobile-menu-cart-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve">
+<g>
+<g>
+<path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z" class=".mobile-menu-cart-icon" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413    h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187    c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z" class=".mobile-menu-cart-icon" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748    c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024    c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99    C101.379,43.261,102.717,41.564,102.497,39.692z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087    c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117    l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096    C128.804,67.232,129.932,65.389,129.492,63.556z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                    </span>Your Cart
+                </a>
+            </li>
+        </ul>
+        <!-- /DROPDOWN -->
+        <a href=@Url.Content("/Login/Login") class="button small secondary">Log In</a>
+        <a href=@Url.Content("/Register/Registration") class="button small primary">Create an Account</a>
+
+    </div>
+    <div class="main-menu-wrap">
+        <div class="menu-bar">
+            <nav>
+                <ul class="main-menu">
+                    <li class="menu-item">
+                        <a href="">Browse Projects</a>
+                        <div class="content-dropdown">
+                            <div class="feature-list-block">
+                                <h6 class="feature-list-title">Categories</h6>
+                                <hr class="line-separator">
+                                <ul class="feature-list">
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=Admin Section">Admin Panel</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=website">Websites</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=school management">School Management</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=hospital management">Hospital Management</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=library management">Library Management</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=web application">Web Applications</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=desktop application">
+                                            Desktop Applications
+                                        </a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=banking project">Banking Project</a>
+                                    </li>
+                                </ul>
+                                <ul class="feature-list">
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=accounting project">Accounting Projects</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/CategorySearch")?query=E-Commerce">E-Commerce</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-list-block">
+                                <h6 class="feature-list-title">Technologies</h6>
+                                <hr class="line-separator">
+                                <ul class="feature-list">
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=Angular.js">Angular.js</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=android">
+                                            Android
+                                        </a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=asp.net">Asp.Net</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=asp.net mvc">Asp.Net MVC</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=java">
+                                            JAVA
+                                        </a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=php">PHP</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=python">Python</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=React.js">React.js</a>
+                                    </li>
+                                </ul>
+                                <ul class="feature-list">
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=sql">Sql</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=scala">Scala</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=Magento">Magento</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=WordPress">WordPress</a>
+                                    </li>
+                                    <li class="feature-list-item">
+                                        <a href="@Url.Action("../Home/TechnologySearch")?query=rust">Rust</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <a href=@Url.Content("/Home/Index")>Home</a>
+                    </li>
+                    @*<li class="menu-item">
+                            <a href=@Url.Content("/Home/HTShop")>How to Shop</a>
+                        </li>*@
+                    <li class="menu-item">
+                        <a href=@Url.Content("/Home/AboutUs")>About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href=@Url.Content("../Register/ContactUs")>Contact Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href=@Url.Content("../Blog/Index")>Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-form">
+
+                @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                {
+                    <input type="text" class="rounded" name="query" id="search_products" placeholder="Search products here...">
+                    <input type="image" src=@Url.Content("/Content/images/search-icon.png") alt="search-icon">
+                }
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+
+    </div>
+    <!--End Dynamic Content-->
+    <footer>
+        <div id="footer-top-wrap">
+            <div id="footer-top">
+                <div class="company-info">
+                    <figure class="logo small">
+                        <img src="@Url.Content("~/ProjectImages/logo.png")" alt="logo-small">
+                    </figure>
+                    <p style="margin-top: 35px;">
+                        sellnbuyapps is plateform where you can buy or sell your projects and code within suitable price. sellnbuyapps is plateform where you can buy or sell your projects and code within suitable price.
+                    </p>
+                </div>
+                <div class="link-info" style="margin-left: 65px;">
+                    <p class="footer-title">Our Achievement</p>
+                    <ul class="company-info-list" style="margin-right: 5px;color: #fff;font-size: 17px;position: relative;top: 2px;">
+                        <li class="company-info-item">
+                            <span class="footer-icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve">
+<g>
+<g>
+<path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413    h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187    c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748    c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024    c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99    C101.379,43.261,102.717,41.564,102.497,39.692z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087    c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117    l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096    C128.804,67.232,129.932,65.389,129.492,63.556z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+<g>
+<path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                            </span>
+                            <p><span>850.296</span> Products</p>
+                        </li>
+                        <li class="company-info-item">
+                            <span class="icon-energy"></span>
+                            <p><span>1.207.300</span> Members</p>
+                        </li>
+                        <li class="company-info-item">
+                            <span class="icon-user"></span>
+                            <p><span>74.059</span> Sellers</p>
+                        </li>
+                    </ul>
+                    <ul class="social-links">
+                        <li class="social-link fb">
+                            <a href="https://www.facebook.com/starappsolutions"></a>
+                        </li>
+                        <li class="social-link twt">
+                            <a href="#"></a>
+                        </li>
+                        <li class="social-link db">
+                            <a href="#"></a>
+                        </li>
+                        <li class="social-link rss">
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-info" style="margin-left:65px;">
+                    <p class="footer-title">Our Community</p>
+                    <!-- LINK LIST -->
+                    <ul class="link-list">
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href=@Url.Content("~/Home/Index")>Home</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href=@Url.Content("/Home/AboutUs")>About Us</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href=@Url.Content("../Register/ContactUs")>Contact Us</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href=@Url.Content("../Blog/Index")>Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-info" style="margin-left:65px;">
+                    <p class="footer-title">Help and FAQs</p>
+                    <ul class="link-list">
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href="#">Help Center</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href="#">FAQs</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href="#">Terms and Conditions</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href="#">Products Licenses</a>
+                        </li>
+                        <li class="link-item">
+                            <div class="bullet"></div>
+                            <a href="#">Security Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="shadow-film closed"></div>
+
+    <svg style="display: none;">
+        <symbol id="svg-arrow" viewBox="0 0 3.923 6.64014" preserveAspectRatio="xMinYMin meet">
+            <path d="M3.711,2.92L0.994,0.202c-0.215-0.213-0.562-0.213-0.776,0c-0.215,0.215-0.215,0.562,0,0.777l2.329,2.329
+			L0.217,5.638c-0.215,0.215-0.214,0.562,0,0.776c0.214,0.214,0.562,0.215,0.776,0l2.717-2.718C3.925,3.482,3.925,3.135,3.711,2.92z" />
+        </symbol>
+    </svg>
+
+    <svg style="display: none;">
+        <symbol id="svg-star" viewBox="0 0 10 10" preserveAspectRatio="xMinYMin meet">
+            <polygon points="4.994,0.249 6.538,3.376 9.99,3.878 7.492,6.313 8.082,9.751 4.994,8.129 1.907,9.751
+	2.495,6.313 -0.002,3.878 3.45,3.376 " />
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="svg-plus" viewBox="0 0 13 13" preserveAspectRatio="xMinYMin meet">
+            <rect x="5" width="3" height="13" />
+            <rect y="5" width="13" height="3" />
+        </symbol>
+    </svg>
+    <!-- jQuery -->
+    <script src=@Url.Content("/Content/js/vendor/jquery-3.1.0.min.js")></script>
+    <!-- Tooltipster -->
+    <script src=@Url.Content("/Content/js/vendor/jquery.tooltipster.min.js")></script>
+    <!-- Tweet -->
+    <script src=@Url.Content("/Content/js/vendor/twitter/jquery.tweet.min.js")></script>
+    <!-- Side Menu -->
+    <script src=@Url.Content("/Content/js/side-menu.js")></script>
+    <!-- Tooltip -->
+    <script src=@Url.Content("/Content/js/tooltip.js")></script>
+    <!-- User Quickview Dropdown -->
+    <script src=@Url.Content("/Content/js/user-board.js")></script>
+    <!-- Home v2 -->
+    <script src=@Url.Content("/Content/js/home-v2.js")></script>
+    <!-- Footer -->
+    <script src=@Url.Content("/Content/js/footer.js")></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

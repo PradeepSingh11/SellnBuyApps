@@ -1,0 +1,103 @@
+﻿@model sellnbuyapps.Models.SbUserService
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Update Profile</h2>
+    </div>
+</div>
+
+<div class="section-wrap">
+    <div class="section">
+        <div align="center" style="margin-bottom:10px;">
+            @if (ViewBag.Message == "Information has been updated successfully")
+            {
+                <span style="color:green;">@ViewBag.Message</span>
+            }
+            else
+            {
+                <span style="color:red;">@ViewBag.Message</span>
+            }
+        </div>
+        <div class="form-popup">
+            <div class="form-popup-content">
+                <h4 class="popup-title">Update Profile</h4>
+                <!-- LINE SEPARATOR -->
+                <hr class="line-separator">
+                @using (Html.BeginForm("Update", "Register", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ID)
+
+                    @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "rl-label" })
+
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @MaxLength = "30" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @style = "color:red" })
+
+                    @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "rl-label" })
+
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @MaxLength = "30" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @style = "color:red" })
+
+                    @Html.LabelFor(model => model.EmailId, htmlAttributes: new { @class = "rl-label" })
+
+                    @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control", @MaxLength = "40" } })
+                    @Html.ValidationMessageFor(model => model.EmailId, "", new { @style = "color:red" })
+
+                    @Html.LabelFor(model => model.MobileNumber, htmlAttributes: new { @class = "rl-label" })
+
+                    @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control", @onkeypress = "return onlyNos(event,this);", @MaxLength = "10" } })
+                    @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @style = "color:red" })
+
+                    @Html.LabelFor(model => model.CompanyURL, htmlAttributes: new { @class = "rl-label" })
+
+                    @Html.EditorFor(model => model.CompanyURL, new { htmlAttributes = new { @class = "form-control", @MaxLength = "50" } })
+                    @Html.ValidationMessageFor(model => model.CompanyURL, "", new { @style = "color:red" })
+
+                    @Html.LabelFor(model => model.ProfilePicture, htmlAttributes: new { @class = "rl-label" })
+
+                    <img src="@Model.ProfilePicture" style="width:100px; height:100px;" alt="Image not found" />
+                    <input type="file" name="profilepicture" value="" style="margin-top: 14px;
+
+margin-bottom: -11px;" />
+                    @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @style = "color:Red" })
+
+                    <span>
+                        <button class="button mid dark">
+                            Update <span class="primary">Now!</span>
+                        </button>
+                    </span>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+    function onlyNos(e, t) {
+
+        var charCode;
+        if (window.event) {
+
+            charCode = window.event.keyCode;
+        }
+        else if (e) {
+
+            charCode = e.which;
+        }
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+
+          
+            return false;
+        }
+        return true;
+    }
+</script>

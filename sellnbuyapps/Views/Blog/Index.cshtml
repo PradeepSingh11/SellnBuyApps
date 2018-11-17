@@ -1,0 +1,93 @@
+﻿@using PagedList.Mvc
+@model  PagedList.IPagedList<sellnbuyapps.Models.Home>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<style>
+    .ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.pagination li {
+        display: inline;
+    }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+            ul.pagination li a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            ul.pagination li a:hover:not(.active) {
+                background-color: #ddd;
+            }
+</style>
+
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Blog</h2>
+    </div>
+</div>
+
+<div class="section-wrap">
+    <div class="section">
+        <!-- BLOG POST PREVIEW -->
+        <div class="blog-post-preview v1 column3-wrap">
+            <!-- BLOG POST PREVIEW ITEM -->
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <div class="blog-post-preview-item column">
+                    <a href="@Url.Action("../Seller/SinglePost")?Id=@Model[i].Id">
+                        <figure class="product-preview-image big liquid">
+                            <img src="@Model[i].screenshot" alt="product-image">
+                        </figure>
+                    </a>
+                    <!-- BLOG POST PREVIEW ITEM INFO -->
+                    <div class="blog-post-preview-item-info">
+                        <p class="text-header mid">
+                            <a href="@Url.Action("../Seller/SinglePost")?Id=@Model[i].Id">@Model[i].projectname</a>
+                        </p>
+                        <div class="meta-line">
+                            <p>Technology Used</p>
+                            <a href="@Url.Action("../Seller/SinglePost")?Id=@Model[i].Id">
+                                <p class="category primary">@Model[i].technologyname</p>
+                            </a>
+
+                        </div>
+                        <p class="description-preview" style="height:100px">@Model[i].description</p>
+                        <div class="clearfix"></div>
+                    </div>
+                    <a href="@Url.Action("../Seller/SinglePost")?Id=@Model[i].Id" class="more-button primary">Read More...</a>
+                </div>
+          <!-- /BLOG POST PREVIEW ITEM -->
+            }
+        </div>
+        <!-- /BLOG POST PREVIEW -->
+        <div class="clearfix"></div>
+        <span style="color:dimgray;margin:auto 45%;">@ViewBag.Message</span>
+        <!-- PAGER -->
+        @if (Model.PageCount > 1)
+        {
+            <div id="container" style="margin-left: 0px; color: #006180;">
+                <p></p>
+                <p></p>
+                <div class="pagination" style="margin-left: 0;color: #006180;">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                    of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </div>
+            </div>
+        }
+        <!-- /PAGER -->
+    </div>
+</div>

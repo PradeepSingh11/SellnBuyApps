@@ -1,0 +1,29 @@
+﻿@model sellnbuyapps.Models.sbAdministrator
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminMasterPage.cshtml";
+}
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Home</h2>
+    </div>
+</div>
+<div class="section-wrap">
+    <div class="section" >
+        <div class="content">
+                <div class="pack-boxes">
+                    <div class="pack-box">
+                        <p class="text-header small">All Projects</p>
+                        <p class="price larger">@ViewBag.TotalProjects</p>
+                    </div>
+                    <div class="pack-box">
+                        <p class="text-header small">All Users</p>
+                        <p class="price larger">@ViewBag.TotalUser</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+           
+        </div>
+    </div>
+</div>
+

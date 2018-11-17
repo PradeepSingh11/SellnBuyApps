@@ -1,0 +1,77 @@
+﻿@model sellnbuyapps.Models.sbProjectDetailsService
+
+@{
+    ViewBag.Title = "ViewProject";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Project Detail</h2>
+    </div>
+</div>
+<div class="section-wrap">
+    <div class="section">
+        <div class="content left">
+            <article class="post">
+                <div style="margin-right:83%;">
+                    <!-- POST PARAGRAPH -->
+                    <h3 class="post-title" style="width:800px;text-align:left;">@Model.ProjectName</h3>
+                    <br />
+                </div>
+                <div class="clearfix"></div>
+                <div class="post-image">
+                    <figure class="product-preview-image large liquid">
+                        <img src="@Model.Screenshot" alt="" >
+                    </figure>
+                </div>
+                <div class="clearfix"></div>
+                <div class="post-content with-title">
+                    <div class="meta-line">
+                        <p class="category primary" style="font-size: 20px;">@Model.TechnologyName</p>
+                        <div class="metadata">
+                            <!-- META ITEM -->
+                            <div class="meta-item">
+                                <p class="text-header" style="font-size: 15px;">@Model.ProjectCategory</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 20px;margin: 0 125px 0 0;"><span>$</span>@Model.Cost</p>
+                    </div>
+                    <div class="post-paragraph">
+                        <h3 class="post-title">Features</h3>
+                        <p>@Model.Features</p>
+                    </div>
+                    <div class="post-paragraph">
+                        <h3 class="post-title">Description</h3>
+                        <p>@Model.Description</p>
+                    </div>
+                    <div class="post-paragraph half">
+                        <h3 class="post-title small">Extra Features</h3>
+                        <ul class="post-item-list">
+                            <li>
+                                <p>@Html.DisplayFor(model => model.Demo)</p>
+                                <p class="text-header" style="margin: -15px 0 0 23px;">Demo Available</p>
+                            </li>
+
+                            <li>
+                                <p>@Html.DisplayFor(model => model.IsFree)</p>
+                                <p class="text-header" style="margin: -15px 0 0 23px;">Is Free</p>
+                            </li>
+
+                            <li>
+                                <p>@Html.DisplayFor(model => model.IsCustomizable)</p>
+                                <p class="text-header" style="margin: -15px 0 0 23px;">Is Customizable</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="line-separator">
+
+                <span>
+                    <input id="BtnTest1" type="button" value="Back" style="margin-top:10px;" class="button mid dark" onclick="window.location.href = '/ProjectDetails/Projects'" />
+                </span>
+            </article>
+        </div>
+    </div>
+</div>
+
+

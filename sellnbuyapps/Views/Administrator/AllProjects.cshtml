@@ -1,0 +1,118 @@
+﻿@using PagedList.Mvc
+@model  PagedList.IPagedList<sellnbuyapps.Models.sbProjectDetailsService>
+
+@{
+    ViewBag.Title = "AllProjects";
+    Layout = "~/Views/Shared/_AdminMasterPage.cshtml";
+}
+<style>
+    .ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.pagination li {
+        display: inline;
+    }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+            ul.pagination li a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            ul.pagination li a:hover:not(.active) {
+                background-color: #ddd;
+            }
+</style>
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>All Projects</h2>
+    </div>
+</div>
+<div class="section-wrap">
+    <div class="section ">
+        <div class="content full">
+            <div class="headline filter manage-project-header">
+                <h4>Search For Project</h4>
+
+                <div class="search-form">
+
+                    @using (Html.BeginForm("ProjectSearch", "Administrator", FormMethod.Get))
+                    {
+                        <input type="text" class="rounded" name="query" id="search_products" placeholder="Search products here...">
+                        <input type="image" src=@Url.Content("/Content/images/search-icon.png") alt="search-icon" style="height: 30px;width: auto;margin: 17px 0 0 0;">
+                    }
+                </div>
+
+            </div>
+            <div class="product-showcase">
+                <div class="product-list list full">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <div class="product-item">
+                            <figure class="product-preview-image small">
+                                <img src="@Model[i].Screenshot" />
+                            </figure>
+                            <div class="product-info">
+
+                                <p class="text-header">@Model[i].ProjectName</p>
+
+                                <p class="product-description">@Model[i].Features</p>
+                            </div>
+
+                            <div class="author-data">
+                                <!-- USER RATING -->
+                                <div class="user-rating">
+                                    <figure class="user-avatar small">
+                                        <img src="@Model[i].CreatedByProfilePicture" alt="user-avatar">
+                                    </figure>
+                                    <p class="text-header tiny">@Model[i].CreatedByFirstName @Model[i].CreatedByLastName</p>
+
+                                </div>
+                            </div>
+
+                            <!-- ITEM METADATA -->
+                            <div class="item-metadata">
+                                <p class="text-header tiny">Project Category: <span>@Model[i].ProjectCategory</span></p><br />
+                                <p class="text-header tiny">Technology Used: <span>@Model[i].TechnologyName</span></p><br />
+                                <p class="text-header tiny">Cost:<span><span>$</span>@Model[i].Cost</span></p>
+                            </div>
+                            <div class="price-info" style="margin-left:25px;">
+                                <p class="price small" style="margin-top:-15px;">Action</p>
+                                <p style="margin-left:-15px;">
+                                    @Html.ActionLink("Details", "ViewProject", new { id = Model[i].Id }) |
+                                    @Html.ActionLink("Delete", "DeleteProject", new { id = Model[i].Id })
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            
+            <span style="color:dimgray;margin:auto 45%;">@ViewBag.Message</span>
+            @if (Model.PageCount > 1)
+            {
+                <div id="container" style="margin-left: 0px">
+                    <p></p>
+                    <p></p>
+                    <div class="pagination" style="color:dimgray">
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                        of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("AllProjects", new { page }))
+                    </div>
+                </div>
+            }
+            
+        </div>
+
+    </div>
+</div>

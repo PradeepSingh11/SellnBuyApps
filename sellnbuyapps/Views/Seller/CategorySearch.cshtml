@@ -1,0 +1,101 @@
+﻿@using PagedList.Mvc
+@model  PagedList.IPagedList<sellnbuyapps.Models.sbProjectDetailsService>
+
+@{
+    ViewBag.Title = "CategorySearch";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+
+<style>
+    .ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.pagination li {
+        display: inline;
+    }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+            ul.pagination li a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            ul.pagination li a:hover:not(.active) {
+                background-color: #ddd;
+            }
+</style>
+<div class="section-wrap">
+    <div class="section">
+        <div class="headline filter primary manage-project-header">
+            <h4>Search Result For <span>"@ViewBag.SearchResult"</span></h4>
+        </div>
+        <div class="product-showcase">
+            <div class="product-list grid column4-wrap owl-carousel">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <div class="product-item column">
+                        <div class="product-preview-actions">
+                            <figure class="product-preview-image">
+                                <img src="@Model[i].Screenshot" alt="product-image" style="height:150px; width:257px;">
+                            </figure>
+                            <div class="preview-actions">
+                                <div class="preview-action">
+                                    <a href="@Url.Action("/SingleProject")?Id=@Model[i].Id">
+                                        <div class="circle tiny primary">
+                                            <span class="icon-tag"></span>
+                                        </div>
+                                    </a>
+                                    <a href="@Url.Action("/SingleProject")?Id=@Model[i].Id">
+                                        <p>Go to Item</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <a href="@Url.Action("/SingleProject")?Id=@Model[i].Id">
+                                <p class="text-header">@Model[i].ProjectName</p>
+                            </a>
+                            <p class="product-description">@Model[i].Features</p>
+                            <a href="@Url.Action("/SingleProject")?Id=@Model[i].Id">
+                                <p class="category primary">@Model[i].TechnologyName</p>
+                            </a>
+                            <p class="price"><span>$</span>@Model[i].Cost</p>
+
+                        </div>
+                        <hr class="line-separator">
+                        <div class="user-rating">
+                            <figure class="user-avatar small">
+                                <img src=@Model[i].CreatedByProfilePicture alt="user-avatar">
+                            </figure>
+                            <p class="text-header tiny">@Model[i].CreatedByFirstName @Model[i].CreatedByLastName</p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="clearfix"></div>
+            <span style="color:dimgray;margin:auto 45%;">@ViewBag.Message</span>
+            @if (Model.PageCount > 1)
+            {
+                <div id="container" style="margin-left: 0px; color: #006180;">
+                    <p></p>
+                    <p></p>
+                    <div class="pagination" style="margin-left: 0;color: #006180;">
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                        of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("CategorySearch", new { page }))
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

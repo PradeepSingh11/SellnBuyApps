@@ -1,0 +1,115 @@
+﻿@model sellnbuyapps.Models.sbProjectDetailsService
+
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Add Project</h2>
+    </div>
+</div>
+
+
+<div class="section-wrap">
+    <div class="section">
+        <div align="center" style="margin-bottom:10px;">
+        @if(ViewBag.Message == "Information has been saved successfully")
+        { 
+        <span style="color:green;">@ViewBag.Message</span>
+        }
+        else
+        {
+            <span style="color:red;">@ViewBag.Message</span>
+        }
+        </div>
+        <div class="form-popup">
+            <div class="form-popup-content">
+                <h4 class="popup-title">Add Project</h4>
+                <!-- LINE SEPARATOR -->
+                <hr class="line-separator">
+                @using (Html.BeginForm("AddProject", "Seller", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    @Html.LabelFor(model => model.ProjectCategory, htmlAttributes: new { @class = "rl-label required" })
+
+                    @Html.DropDownListFor(model => model.ProjectCategoryId, ViewBag.CategoryList as SelectList, "-- Select Category --", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProjectCategoryId, "", new { @style = "color:Red" })
+
+                    @Html.LabelFor(model => model.ProjectName, htmlAttributes: new { @class = "rl-label required", @style = "margin: 15px 0 15px 0;" })
+
+                    @Html.EditorFor(model => model.ProjectName, new { htmlAttributes = new { @class = "form-control", @MaxLength = "50" } })
+                    @Html.ValidationMessageFor(model => model.ProjectName, "", new { @style = "color:Red" })
+
+                    @Html.LabelFor(model => model.Cost, htmlAttributes: new { @class = "rl-label required" })
+
+                    @Html.EditorFor(model => model.Cost, new { htmlAttributes = new { @class = "form-control", @MaxLength = "5", @onkeypress = "return onlyNos(event,this);" } })
+                    @Html.ValidationMessageFor(model => model.Cost, "", new { @style = "color:Red" })
+
+                    @Html.LabelFor(model => model.Features, htmlAttributes: new { @class = "rl-label required" })
+
+                    @Html.EditorFor(model => model.Features, new { htmlAttributes = new { @class = "form-control", @MaxLength = "80" } })
+                    @Html.ValidationMessageFor(model => model.Features, "", new { @style = "color:Red" })
+
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "rl-label required" })
+
+                    @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @MaxLength = "4500" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @style = "color:Red" })
+
+                    @Html.LabelFor(model => model.Technology, htmlAttributes: new { @class = "rl-label required", @style = "margin: 15px 0 15px 0;" })
+
+                    @Html.DropDownListFor(model => model.Technology, ViewBag.TechnologyList as SelectList, "-- Select Technology --", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Technology, "", new { @style = "color:Red" })
+
+                    @Html.LabelFor(model => model.Screenshot, htmlAttributes: new { @class = "rl-label required", @style = "margin: 15px 0 15px 0;" })
+
+                    <input type="file" name="fileUpload" class="upload-file-actions" />
+                    @*@Html.EditorFor(model => model.Screenshot, new { htmlAttributes = new { @class = "form-control", @name = "fileUpload", @type = "file" } })*@
+                    @Html.ValidationMessageFor(model => model.Screenshot, "", new { @style = "color:Red" })
+
+                    @Html.CheckBoxFor(model => model.IsCustomizable, new { @class = "text-danger", @style = "margin: 10px 0px -29px 0px;" })
+                    @Html.LabelFor(model => model.IsCustomizable, htmlAttributes: new { @class = "rl-label", @style = "margin: 15px 0 15px 20px;" })
+
+                    @Html.CheckBoxFor(model => model.Demo, new { @class = "text-danger", @style = "margin: 10px 0px -29px 0px;" })
+                    @Html.LabelFor(model => model.Demo, htmlAttributes: new { @class = "rl-label", @Style = "margin: 15px 0 15px 20px;" })
+
+                    @Html.CheckBoxFor(model => model.IsFree, new { @class = "text-danger", @style = "margin: 10px 0px -29px 0px;" })
+                    @Html.LabelFor(model => model.IsFree, htmlAttributes: new { @class = "rl-label", @Style = "margin: 15px 0 15px 20px;" })
+
+                    <button id="btnSubmit" class="button mid dark" style="margin: 10px 0 10px 0;" onclick="">
+                        Submit <span class="primary">Now!</span>
+                    </button>
+                    
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+    function onlyNos(e, t) {
+       
+        var charCode;
+        if (window.event) {
+           
+             charCode = window.event.keyCode; 
+        }
+        else if (e) {
+          
+             charCode = e.which; 
+        }
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+           
+           return false; 
+        } 
+        return true; 
+    }
+</script>

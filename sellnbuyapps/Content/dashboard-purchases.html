@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from odindesign-themes.com/emerald-dragon/dashboard-purchases.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Aug 2018 10:39:50 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/vendor/simple-line-icons.css">
+    <link rel="stylesheet" href="css/vendor/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- favicon -->
+	<link rel="icon" href="favicon.ico">
+	<title>Emerald Dragon | Dashboard</title>
+</head>
+<body>
+
+    <!-- FORM POPUP -->
+	<div id="recommendation-popup" class="form-popup new-message mfp-hide">
+		<!-- FORM POPUP CONTENT -->
+		<div class="form-popup-content">
+			<h4 class="popup-title">Write Your Recommendation</h4>
+			<!-- LINE SEPARATOR -->
+			<hr class="line-separator">
+			<!-- /LINE SEPARATOR -->
+            <div class="recommendation-wrap">
+                <div class="recommendation-item">
+                    <a href="#" class="recommendation good">
+                        <span class="icon-like"></span>
+                    </a>
+                    <p class="text-header small">Recommended</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <a href="#" class="recommendation bad hoverable">
+                        <span class="icon-dislike"></span>
+                    </a>
+                    <p class="text-header small">Not Recommended</p>
+                </div>
+            </div>
+			<form class="recommendation-form">
+				<!-- INPUT CONTAINER -->
+				<div class="input-container">
+					<label for="comment" class="rl-label b-label">Your Comment:</label>
+                    <textarea name="comment" id="comment" placeholder="Write your message here..."></textarea>
+				</div>
+				<!-- /INPUT CONTAINER -->
+                <p class="highlighted"><span>Note:</span> Your recommendation and comment will be visible in the author’s profile page. You can change and edit your comment and recommendation at any time, just remember that you can’t change your recommendation choice more than 3 times.</p>
+
+				<button class="button mid dark">Save your <span class="primary">Recommendation</span></button>
+			</form>
+		</div>
+		<!-- /FORM POPUP CONTENT -->
+	</div>
+	<!-- /FORM POPUP -->
+
+	<!-- SIDE MENU -->
+	<div id="dashboard-options-menu" class="side-menu dashboard left closed">
+        <!-- SVG PLUS -->
+		<svg class="svg-plus">
+			<use xlink:href="#svg-plus"></use>
+		</svg>
+		<!-- /SVG PLUS -->
+        
+		<!-- SIDE MENU HEADER -->
+		<div class="side-menu-header">
+			<!-- USER QUICKVIEW -->
+			<div class="user-quickview">
+				<!-- USER AVATAR -->
+				<a href="author-profile.html">
+				<div class="outer-ring">
+					<div class="inner-ring"></div>
+					<figure class="user-avatar">
+						<img src="images/avatars/avatar_01.jpg" alt="avatar">
+					</figure>
+				</div>
+				</a>
+				<!-- /USER AVATAR -->
+
+				<!-- USER INFORMATION -->
+				<p class="user-name">Johnny Fisher</p>
+				<p class="user-money">$745.00</p>
+				<!-- /USER INFORMATION -->
+			</div>
+			<!-- /USER QUICKVIEW -->
+		</div>
+		<!-- /SIDE MENU HEADER -->
+
+		<!-- SIDE MENU TITLE -->
+		<p class="side-menu-title">Your Account</p>
+		<!-- /SIDE MENU TITLE -->
+
+		<!-- DROPDOWN -->
+		<ul class="dropdown dark hover-effect interactive">
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-settings.html">
+                    <span class="sl-icon icon-settings"></span>
+                    Account Settings
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-notifications.html">
+                    <span class="sl-icon icon-star"></span>
+                    Notifications
+                </a>
+                <!-- PIN -->
+                <span class="pin soft-edged big primary">49</span>
+                <!-- /PIN -->
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item interactive">
+				<a href="#">
+                    <span class="sl-icon icon-envelope"></span>
+                    Messages
+                    <!-- SVG ARROW -->
+					<svg class="svg-arrow">
+						<use xlink:href="#svg-arrow"></use>
+					</svg>
+					<!-- /SVG ARROW -->
+				</a>
+
+				<!-- INNER DROPDOWN -->
+				<ul class="inner-dropdown">
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox.html">Your Inbox (36)</a>
+						<!-- PIN -->
+						<span class="pin soft-edged secondary">2</span>
+						<!-- /PIN -->
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox-v2.html">Your Inbox (36) V2</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-openmessage.html">Open Message</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox.html">Starred Message</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox.html">Deleted Messages</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+				</ul>
+				<!-- INNER DROPDOWN -->
+
+                <!-- PIN -->
+                <span class="pin soft-edged big secondary">!</span>
+                <!-- /PIN -->
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item active">
+				<a href="dashboard-purchases.html">
+                    <span class="sl-icon icon-tag"></span>
+                    Your Purchases
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-buycredits.html">
+                    <span class="sl-icon icon-credit-card"></span>
+                    Buy Credits
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+		</ul>
+		<!-- /DROPDOWN -->
+
+        <!-- SIDE MENU TITLE -->
+		<p class="side-menu-title">Info &amp; Statistics</p>
+		<!-- /SIDE MENU TITLE -->
+
+		<!-- DROPDOWN -->
+		<ul class="dropdown dark hover-effect">
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-statement.html">
+                    <span class="sl-icon icon-layers"></span>
+                    Sales Statement
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-statistics.html">
+                    <span class="sl-icon icon-chart"></span>
+                    Statistics
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+		</ul>
+		<!-- /DROPDOWN -->
+
+         <!-- SIDE MENU TITLE -->
+		<p class="side-menu-title">Author Tools</p>
+		<!-- /SIDE MENU TITLE -->
+
+		<!-- DROPDOWN -->
+		<ul class="dropdown dark hover-effect">
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-uploaditem.html">
+                    <span class="sl-icon icon-arrow-up-circle"></span>
+                    Upload Item
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-manageitems.html">
+                    <span class="sl-icon icon-folder-alt"></span>
+                    Manage Items
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+            <!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-withdrawals.html">
+                    <span class="sl-icon icon-wallet"></span>
+                    Withdrawals
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+		</ul>
+		<!-- /DROPDOWN -->
+
+        <a href="#" class="button medium secondary">Logout</a>
+	</div>
+	<!-- /SIDE MENU -->
+
+    <!-- DASHBOARD BODY -->
+    <div class="dashboard-body">
+        <!-- DASHBOARD HEADER -->
+        <div class="dashboard-header retracted">
+            <!-- DB CLOSE BUTTON -->
+            <a href="index.html" class="db-close-button">
+               <img src="images/dashboard/back-icon.png" alt="back-icon">
+            </a>
+            <!-- DB CLOSE BUTTON -->
+
+			<!-- DB OPTIONS BUTTON -->
+            <div class="db-options-button">
+               <img src="images/dashboard/db-list-right.png" alt="db-list-right">
+			   <img src="images/dashboard/close-icon.png" alt="close-icon">
+            </div>
+            <!-- DB OPTIONS BUTTON -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item title">
+                <!-- DB SIDE MENU HANDLER -->
+                 <div class="db-side-menu-handler">
+                    <img src="images/dashboard/db-list-left.png" alt="db-list-left">
+                </div>
+                <!-- /DB SIDE MENU HANDLER -->
+                <h6>Your Dashboard</h6>
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+			<!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item form">
+                <form class="dashboard-search">
+                    <input type="text" name="search" id="search_dashboard" placeholder="Search on dashboard...">
+                    <input type="image" src="images/dashboard/search-icon.png" alt="search-icon">
+                </form>
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item stats">
+                <!-- STATS META -->
+                <div class="stats-meta">
+                    <div class="pie-chart pie-chart1">
+                        <!-- SVG PLUS -->
+                        <svg class="svg-plus primary">
+                            <use xlink:href="#svg-plus"></use>
+                        </svg>
+                        <!-- /SVG PLUS -->
+                    </div>
+                    <h6>64.579</h6>
+                    <p>New Original Visits</p>
+                </div>
+                <!-- /STATS META -->
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item stats">
+                <!-- STATS META -->
+                <div class="stats-meta">
+                    <div class="pie-chart pie-chart2">
+                        <!-- SVG PLUS -->
+                        <svg class="svg-minus tertiary">
+                            <use xlink:href="#svg-minus"></use>
+                        </svg>
+                        <!-- /SVG PLUS -->
+                    </div>
+                    <h6>20.8</h6>
+                    <p>Less Sales Than Last Month</p>
+                </div>
+                <!-- /STATS META -->
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item stats">
+                <!-- STATS META -->
+                <div class="stats-meta">
+                    <div class="pie-chart pie-chart3">
+                        <!-- SVG PLUS -->
+                        <svg class="svg-plus primary">
+                            <use xlink:href="#svg-plus"></use>
+                        </svg>
+                        <!-- /SVG PLUS -->
+                    </div>
+                    <h6>322k</h6>
+                    <p>Total Visits This Month</p>
+                </div>
+                <!-- /STATS META -->
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+			<!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item back-button">
+                <a href="index.html" class="button mid dark-light">Back to Homepage</a>
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+        </div>
+        <!-- DASHBOARD HEADER -->
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="dashboard-content">
+            <!-- HEADLINE -->
+            <div class="headline purchases primary">
+                <h4>Your Purchases</h4>
+				<form id="purchase_filter_form" name="purchase_filter_form">
+					<label for="itemspp_filter" class="select-block">
+						<select name="itemspp_filter" id="itemspp_filter">
+							<option value="0">12 Items Per Page</option>
+							<option value="1">6 Items Per Page</option>
+						</select>
+						<!-- SVG ARROW -->
+						<svg class="svg-arrow">
+							<use xlink:href="#svg-arrow"></use>
+						</svg>
+						<!-- /SVG ARROW -->
+					</label>
+
+					<label for="date_filter" class="select-block">
+						<select name="date_filter" id="date_filter">
+							<option value="0">Date (Newest to Oldest)</option>
+							<option value="1">Date (Oldest to Newest)</option>
+						</select>
+						<!-- SVG ARROW -->
+						<svg class="svg-arrow">
+							<use xlink:href="#svg-arrow"></use>
+						</svg>
+						<!-- /SVG ARROW -->
+					</label>
+
+					<div class="search-form">
+						<input type="text" class="rounded search" name="search" id="search_products" placeholder="Search products here...">
+						<input type="image" src="images/search-icon-small.png" alt="search-icon">
+					</div>
+				</form>
+            </div>
+            <!-- /HEADLINE -->
+
+            <!-- PURCHASES LIST -->
+            <div class="purchases-list">
+                <!-- PURCHASES LIST HEADER -->
+                <div class="purchases-list-header">
+                    <div class="purchases-list-header-date">
+                        <p class="text-header small">Date</p>
+                    </div>
+                    <div class="purchases-list-header-details">
+                        <p class="text-header small">Product Details</p>
+                    </div>
+                    <div class="purchases-list-header-info">
+                        <p class="text-header small">Additional Info</p>
+                    </div>
+                    <div class="purchases-list-header-price">
+                        <p class="text-header small">Price</p>
+                    </div>
+                    <div class="purchases-list-header-download">
+                        <p class="text-header small">Download</p>
+                    </div>
+                    <div class="purchases-list-header-recommend">
+                        <p class="text-header small">Recommend Item</p>
+                    </div>
+                </div>
+                <!-- /PURCHASES LIST HEADER -->
+
+                <!-- PURCHASE ITEM -->
+                <div class="purchase-item">
+                    <div class="purchase-item-date">
+                        <p>Dec 18th, 2015</p>
+                    </div>
+                    <div class="purchase-item-details">
+                        <!-- ITEM PREVIEW -->
+                        <div class="item-preview">
+                            <figure class="product-preview-image small liquid">
+                                <img src="images/items/westeros_s.jpg" alt="product-image">
+                            </figure>
+                            <p class="text-header">Westeros Custom Clothing</p>
+                            <p class="description">Lorem ipsum dolor sit urarde adipisicing elit dem...</p>
+                        </div>
+                        <!-- /ITEM PREVIEW -->
+                    </div>
+                    <div class="purchase-item-info">
+                        <p class="category primary">PSD Templates</p>
+                        <p><span class="light">License:</span> Standard</p>
+                        <p><span class="light">Author:</span> Odin_Design</p>
+                        <p class="text-header tiny">Check Invoice</p>
+                    </div>
+                    <div class="purchase-item-price">
+                        <p class="price"><span>$</span>14</p>
+                    </div>
+                    <div class="purchase-item-download">
+                        <a href="#" class="button dark-light">Download Item</a>
+                    </div>
+                    <div class="purchase-item-recommend">
+                        <div class="recommendation-wrap">
+                            <a href="#recommendation-popup" class="recommendation good hoverable open-recommendation-form">
+                                <span class="icon-like"></span>
+                            </a>
+                            <a href="#recommendation-popup" class="recommendation bad hoverable open-recommendation-form">
+                                <span class="icon-dislike"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /PURCHASE ITEM -->
+
+                <!-- PURCHASE ITEM -->
+                <div class="purchase-item">
+                    <div class="purchase-item-date">
+                        <p>May 4th, 2015</p>
+                    </div>
+                    <div class="purchase-item-details">
+                        <!-- ITEM PREVIEW -->
+                        <div class="item-preview">
+                            <figure class="product-preview-image small liquid">
+                                <img src="images/items/miniverse_s.jpg" alt="product-image">
+                            </figure>
+                            <p class="text-header">Miniverse - Hero Image Composer</p>
+                            <p class="description">Lorem ipsum dolor sit urarde adipisicing elit dem...</p>
+                        </div>
+                        <!-- /ITEM PREVIEW -->
+                    </div>
+                    <div class="purchase-item-info">
+                        <p class="category primary">Hero Images</p>
+                        <p><span class="light">License:</span> Standard</p>
+                        <p><span class="light">Author:</span> Odin_Design</p>
+                        <p class="text-header tiny">Check Invoice</p>
+                    </div>
+                    <div class="purchase-item-price">
+                        <p class="price"><span>$</span>12</p>
+                    </div>
+                    <div class="purchase-item-download">
+                        <a href="#" class="button dark-light">Download Item</a>
+                    </div>
+                    <div class="purchase-item-recommend">
+                        <div class="recommendation-wrap">
+                            <a href="#recommendation-popup" class="recommendation good open-recommendation-form">
+                                <span class="icon-like"></span>
+                            </a>
+                            <a href="#recommendation-popup" class="recommendation bad hoverable open-recommendation-form">
+                                <span class="icon-dislike"></span>
+                            </a>
+                        </div>
+                        <p class="text-header">
+                            <a href="#recommendation-popup" class="open-recommendation-form">Review Comment</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- /PURCHASE ITEM -->
+
+                <!-- PURCHASE ITEM -->
+                <div class="purchase-item">
+                    <div class="purchase-item-date">
+                        <p>May 4th, 2015</p>
+                    </div>
+                    <div class="purchase-item-details">
+                        <!-- ITEM PREVIEW -->
+                        <div class="item-preview">
+                            <figure class="product-preview-image small liquid">
+                                <img src="images/items/pixel_s.jpg" alt="product-image">
+                            </figure>
+                            <p class="text-header">Pixel Diamond Gaming Shop</p>
+                            <p class="description">Lorem ipsum dolor sit urarde adipisicing elit dem...</p>
+                        </div>
+                        <!-- /ITEM PREVIEW -->
+                    </div>
+                    <div class="purchase-item-info">
+                        <p class="category primary">Shopify</p>
+                        <p><span class="light">License:</span> Standard</p>
+                        <p><span class="light">Author:</span> Sarah-Imaginarium</p>
+                        <p class="text-header tiny">Check Invoice</p>
+                    </div>
+                    <div class="purchase-item-price">
+                        <p class="price"><span>$</span>86</p>
+                    </div>
+                    <div class="purchase-item-download">
+                        <a href="#" class="button dark-light">Download Item</a>
+                    </div>
+                    <div class="purchase-item-recommend">
+                        <div class="recommendation-wrap">
+                            <a href="#recommendation-popup" class="recommendation good hoverable open-recommendation-form">
+                                <span class="icon-like"></span>
+                            </a>
+                            <a href="#recommendation-popup" class="recommendation bad open-recommendation-form">
+                                <span class="icon-dislike"></span>
+                            </a>
+                        </div>
+                        <p class="text-header">
+                            <a href="#recommendation-popup" class="open-recommendation-form">Review Comment</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- /PURCHASE ITEM -->
+
+                <!-- PURCHASE ITEM -->
+                <div class="purchase-item">
+                    <div class="purchase-item-date">
+                        <p>Feb 17th, 2015</p>
+                    </div>
+                    <div class="purchase-item-details">
+                        <!-- ITEM PREVIEW -->
+                        <div class="item-preview">
+                            <figure class="product-preview-image small liquid">
+                                <img src="images/items/city_s.jpg" alt="product-image">
+                            </figure>
+                            <p class="text-header">City Seamless Game Background</p>
+                            <p class="description">Lorem ipsum dolor sit urarde adipisicing elit dem...</p>
+                        </div>
+                        <!-- /ITEM PREVIEW -->
+                    </div>
+                    <div class="purchase-item-info">
+                        <p class="category primary">Backgrounds</p>
+                        <p><span class="light">License:</span> Standard</p>
+                        <p><span class="light">Author:</span> GamePix</p>
+                        <p class="text-header tiny">Check Invoice</p>
+                    </div>
+                    <div class="purchase-item-price">
+                        <p class="price"><span>$</span>10</p>
+                    </div>
+                    <div class="purchase-item-download">
+                        <a href="#" class="button dark-light">Download Item</a>
+                    </div>
+                    <div class="purchase-item-recommend">
+                        <div class="recommendation-wrap">
+                            <a href="#recommendation-popup" class="recommendation good hoverable open-recommendation-form">
+                                <span class="icon-like"></span>
+                            </a>
+                            <a href="#recommendation-popup" class="recommendation bad hoverable open-recommendation-form">
+                                <span class="icon-dislike"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /PURCHASE ITEM -->
+
+                 <!-- PURCHASE ITEM -->
+                <div class="purchase-item">
+                    <div class="purchase-item-date">
+                        <p>Jan 22th, 2015</p>
+                    </div>
+                    <div class="purchase-item-details">
+                        <!-- ITEM PREVIEW -->
+                        <div class="item-preview">
+                            <figure class="product-preview-image small liquid">
+                                <img src="images/items/punk_s.jpg" alt="product-image">
+                            </figure>
+                            <p class="text-header">Punk Concert Flyer Template</p>
+                            <p class="description">Lorem ipsum dolor sit urarde adipisicing elit dem...</p>
+                        </div>
+                        <!-- /ITEM PREVIEW -->
+                    </div>
+                    <div class="purchase-item-info">
+                        <p class="category primary">Flyers</p>
+                        <p><span class="light">License:</span> Standard</p>
+                        <p><span class="light">Author:</span> GamePix</p>
+                        <p class="text-header tiny">Check Invoice</p>
+                    </div>
+                    <div class="purchase-item-price">
+                        <p class="price"><span>$</span>6</p>
+                    </div>
+                    <div class="purchase-item-download">
+                        <a href="#" class="button dark-light">Download Item</a>
+                    </div>
+                    <div class="purchase-item-recommend">
+                        <div class="recommendation-wrap">
+                            <a href="#recommendation-popup" class="recommendation good open-recommendation-form">
+                                <span class="icon-like"></span>
+                            </a>
+                            <a href="#recommendation-popup" class="recommendation bad hoverable open-recommendation-form">
+                                <span class="icon-dislike"></span>
+                            </a>
+                        </div>
+                        <p class="text-header">
+                            <a href="#recommendation-popup" class="open-recommendation-form">Review Comment</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- /PURCHASE ITEM -->
+
+                <!-- PAGER -->
+				<div class="pager-wrap">
+					<div class="pager primary">
+						<div class="pager-item"><p>1</p></div>
+						<div class="pager-item active"><p>2</p></div>
+						<div class="pager-item"><p>3</p></div>
+						<div class="pager-item"><p>...</p></div>
+						<div class="pager-item"><p>17</p></div>
+					</div>
+				</div>
+				<!-- /PAGER -->
+            </div>
+            <!-- /PURCHASES LIST -->
+        </div>
+        <!-- DASHBOARD CONTENT -->
+    </div>
+    <!-- /DASHBOARD BODY -->
+
+	<div class="shadow-film closed"></div>
+
+<!-- SVG ARROW -->
+<svg style="display: none;">	
+	<symbol id="svg-arrow" viewBox="0 0 3.923 6.64014" preserveAspectRatio="xMinYMin meet">
+		<path d="M3.711,2.92L0.994,0.202c-0.215-0.213-0.562-0.213-0.776,0c-0.215,0.215-0.215,0.562,0,0.777l2.329,2.329
+			L0.217,5.638c-0.215,0.215-0.214,0.562,0,0.776c0.214,0.214,0.562,0.215,0.776,0l2.717-2.718C3.925,3.482,3.925,3.135,3.711,2.92z"/>
+	</symbol>
+</svg>
+<!-- /SVG ARROW -->
+
+<!-- SVG PLUS -->
+<svg style="display: none;">
+	<symbol id="svg-plus" viewBox="0 0 13 13" preserveAspectRatio="xMinYMin meet">
+		<rect x="5" width="3" height="13"/>
+		<rect y="5" width="13" height="3"/>
+	</symbol>
+</svg>
+<!-- /SVG PLUS -->
+
+<!-- SVG MINUS -->
+<svg style="display: none;">
+	<symbol id="svg-minus" viewBox="0 0 13 13" preserveAspectRatio="xMinYMin meet">
+		<rect y="5" width="13" height="3"/>
+	</symbol>
+</svg>
+<!-- /SVG MINUS -->
+
+<!-- jQuery -->
+<script src="js/vendor/jquery-3.1.0.min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+<!-- imgLiquid -->
+<script src="js/vendor/imgLiquid-min.js"></script>
+<!-- XM Pie Chart -->
+<script src="js/vendor/jquery.xmpiechart.min.js"></script>
+<!-- Side Menu -->
+<script src="js/side-menu.js"></script>
+<!-- Dashboard Header -->
+<script src="js/dashboard-header.js"></script>
+<!-- Liquid -->
+<script src="js/liquid.js"></script>
+<!-- Dashboard Purchases -->
+<script src="js/dashboard-purchases.js"></script>
+</body>
+
+<!-- Mirrored from odindesign-themes.com/emerald-dragon/dashboard-purchases.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Aug 2018 10:39:56 GMT -->
+</html>

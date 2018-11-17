@@ -1,0 +1,55 @@
+﻿@model sellnbuyapps.Models.Login
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<script type="text/javascript">
+    function preventBack() { window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Login</h2>
+    </div>
+</div>
+<div class="section-wrap">
+    <div class="section">
+        <div align="center" style="margin-bottom:10px;"><span style="color:red;">@ViewBag.Message</span></div>
+
+        <div class="form-popup">
+            <div class="form-popup-content">
+                <h4 class="popup-title">Login</h4>
+                <!-- LINE SEPARATOR -->
+                <hr class="line-separator">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.LabelFor(model => model.EmailId, htmlAttributes: new { @class = "rl-label" })
+                    @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control", @style="margin:0 0 0 0" } })
+                    @Html.ValidationMessageFor(model => model.EmailId, "", new { @style = "color:Red; float:right;" })
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "rl-label", @style= "margin: 12px auto;" })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @style = "margin:0 0 10px 0" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @style = "color:Red; float:right;" })
+                    <span>
+                        <a href=@Url.Content("../ForgotPassword/ForgotPassword") style="width: 35%; color:#0066c0;">Forgot Password?</a>
+                        @*<input id="btnForgotPassword" type="url" value="Forgot Password?" style="width: 35%; color:#0066c0;" onclick="window.location.href = '../ForgotPassword/ForgotPassword'" />*@
+                    </span>
+                    <span>
+                        <button id="btnSubmit" class="button mid dark">
+                            Login <span class="primary">Now!</span>
+                        </button>
+                    </span>
+                    <span>
+                        <input id="BtnTest1" type="button" value="Create account" class="button mid dark" style="margin: 10px 0 0 0;" onclick="window.location.href = '../Register/Registration'"   />
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

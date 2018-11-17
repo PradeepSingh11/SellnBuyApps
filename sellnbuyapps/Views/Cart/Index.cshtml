@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+
+@using sellnbuyapps.Models;
+
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Shopping Cart</h2>
+    </div>
+</div>
+<!-- /SECTION HEADLINE -->
+<!-- SECTION -->
+<div class="section-wrap">
+    <div class="section">
+        <div class="content">
+            <!-- CART -->
+            <div class="cart">
+                <!-- CART HEADER -->
+                <div class="cart-header">
+                    <div class="cart-header-product">
+                        <p class="text-header small">Product Details</p>
+                    </div>
+                    <div class="cart-header-category">
+                        <p class="text-header small">Technology</p>
+                    </div>
+                    <div class="cart-header-price">
+                        <p class="text-header small">Price</p>
+                    </div>
+                    <div class="cart-header-actions">
+                        <p class="text-header small">Remove</p>
+                    </div>
+                </div>
+                <!-- /CART HEADER -->
+                <!-- CART ITEM -->
+                @if (Session["cart"] != null)
+                {
+                    foreach (Home item in (List<Home>)Session["cart"])
+                    {
+                        <div class="cart-item">
+                            <!-- CART ITEM PRODUCT -->
+                            <div class="cart-item-product">
+                                <!-- ITEM PREVIEW -->
+                                <div class="item-preview">
+
+                                    <figure class="product-preview-image small liquid">
+                                        <img src="@item.screenshot" alt="">
+                                    </figure>
+
+                                    <p class="text-header" style="margin-top: 18px;">@item.projectname</p>
+                                    @*<p class="description">@item.features</p>*@
+                                </div>
+                                <!-- /ITEM PREVIEW -->
+                            </div>
+                            <!-- /CART ITEM PRODUCT -->
+                            <!-- CART ITEM CATEGORY -->
+                            <div class="cart-item-category">
+                                <p class="category primary">@item.technologyname</p>
+                            </div>
+                            <!-- /CART ITEM CATEGORY -->
+                            <!-- CART ITEM PRICE -->
+                            <div class="cart-item-price">
+                                <p class="price"><span>$</span>@item.cost</p>
+                            </div>
+                            <!-- /CART ITEM PRICE -->
+                            <!-- CART ITEM ACTIONS -->
+                            <div class="cart-item-actions">
+
+                                <a href="@Url.Action("Remove", "Cart", new { id = item.Id })" class="button dark-light rmv">
+
+                                    <!-- SVG PLUS -->
+                                    <svg class="svg-plus">
+                                        <use xlink:href="#svg-plus"></use>
+                                    </svg>
+                                    <!-- /SVG PLUS -->
+                                </a>
+                            </div>
+                            <!-- /CART ITEM ACTIONS -->
+                        </div>
+                    }
+                    <div class="cart-total">
+                        <p class="price medium">
+                            <span>$</span>
+                            @{
+                                List<Home> cart = (List<Home>)Session["cart"];
+                                var total = cart.Sum(home => home.cost);
+                            }
+                            @total
+                        <p>
+                        </p>
+                        <p class="text-header total">Cart Total</p>
+                    </div>
+                                }
+                <!-- /CART TOTAL -->
+                <!-- CART ACTIONS -->
+                <div class="cart-actions">
+                    @if (Session["cart"] != null)
+                    {
+                        <a href=@Url.Content("#") class="button mid primary">Make Payment</a>
+                    }
+                    <div><h3>@ViewBag.Check</h3></div>
+                    <a href="@Url.Action("Index", "Seller")" class="button mid dark-light spaced">Continue Browsing</a>
+                </div>
+                <!-- /CART ACTIONS -->
+
+            </div>
+            <!-- /CART -->
+        </div>
+        <!-- CONTENT -->
+    </div>
+</div>

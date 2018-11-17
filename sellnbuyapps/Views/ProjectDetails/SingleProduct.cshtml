@@ -1,0 +1,92 @@
+﻿@model sellnbuyapps.Models.ProjectDetails
+@{
+    ViewBag.Title = "SingleProduct";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+<!-- SECTION HEADLINE -->
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Project Description</h2>
+        <p>Home<span class="separator">/</span>Projects<span class="separator">/</span><span class="current-section">Project Description</span></p>
+    </div>
+</div>
+<!-- /SECTION HEADLINE -->
+<!-- SECTION -->
+<div class="section-wrap">
+        <div class="section">
+            <div class="content left">
+                <!-- POST -->
+                <article class="post">
+                    <!-- Post Name-->
+                    <!-- POST CONTENT -->
+                    <div style="margin-right:83%;">
+                        <!-- POST PARAGRAPH -->
+                        <h3 class="post-title" style="width: 800px;text-align: left;">@Model.projectname</h3>
+                        <br />
+                    </div>
+                    <!-- /Post Name-->
+                    <!-- POST IMAGE -->
+                    <div class="post-image">
+                        <figure class="product-preview-image large liquid">
+                            <img src="@Model.screenshot" alt="" >
+                        </figure>
+
+                        @*<a href="#" class="button mid primary">Go to Live Demo</a>*@
+                    </div>
+                    <!-- /POST IMAGE -->
+
+                    <hr class="line-separator">
+                    <!-- POST CONTENT -->
+                    <div class="post-content">
+                        <!-- POST PARAGRAPH -->
+                        <div class="post-paragraph">
+                            <h3 class="post-title">Features:</h3>
+                            <p>@Model.features</p>
+                            
+                        </div>
+                        <!-- /POST PARAGRAPH -->
+                        <!-- POST PARAGRAPH -->
+                        <div class="post-paragraph">
+                            <h3 class="post-title small">Description:</h3>
+                            <p>@Model.description</p>
+                        </div>
+                        <!-- /POST PARAGRAPH -->
+                        <!-- POST PARAGRAPH -->
+                        <div class="post-paragraph half">
+                            <h3 class="post-title small">Technology Used:</h3>
+                            <!-- POST ITEM LIST -->
+                            <p>@Model.technologyname</p>
+                            <!-- POST ITEM LIST -->
+                        </div>
+                        <div class="post-paragraph half">
+                            <h3 class="post-title small">Cost</h3>
+                            <p><span>$</span>@Model.cost</p>
+                        </div>
+                        <!-- /POST PARAGRAPH -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- /POST CONTENT -->
+                    <hr class="line-separator">
+                    <!-- SHARE -->
+                    <div class="share-links-wrap">
+                        <p class="text-header small">Share this:</p>
+                        <!-- SHARE LINKS -->
+                        <ul class="share-links hoverable">
+                            <li><a href="#" class="fb"></a></li>
+                            <li><a href="#" class="twt"></a></li>
+                            <li><a href="#" class="db"></a></li>
+                            <li><a href="#" class="rss"></a></li>
+                            <li><a href="#" class="gplus"></a></li>
+                        </ul>
+                        <!-- /SHARE LINKS -->
+                    </div>
+                    <!-- /SHARE -->
+                </article>
+                <!-- /POST -->
+
+            </div>
+            <!-- CONTENT -->
+        </div>
+</div>
+<!-- /SECTION -->

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from odindesign-themes.com/emerald-dragon/dashboard-statement.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Aug 2018 10:39:56 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="css/vendor/bootstrap-datepicker3.standalone.min.css">
+    <link rel="stylesheet" href="css/vendor/simple-line-icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- favicon -->
+	<link rel="icon" href="favicon.ico">
+	<title>Emerald Dragon | Dashboard</title>
+</head>
+<body>
+
+	<!-- SIDE MENU -->
+	<div id="dashboard-options-menu" class="side-menu dashboard left closed">
+        <!-- SVG PLUS -->
+		<svg class="svg-plus">
+			<use xlink:href="#svg-plus"></use>
+		</svg>
+		<!-- /SVG PLUS -->
+        
+		<!-- SIDE MENU HEADER -->
+		<div class="side-menu-header">
+			<!-- USER QUICKVIEW -->
+			<div class="user-quickview">
+				<!-- USER AVATAR -->
+				<a href="author-profile.html">
+				<div class="outer-ring">
+					<div class="inner-ring"></div>
+					<figure class="user-avatar">
+						<img src="images/avatars/avatar_01.jpg" alt="avatar">
+					</figure>
+				</div>
+				</a>
+				<!-- /USER AVATAR -->
+
+				<!-- USER INFORMATION -->
+				<p class="user-name">Johnny Fisher</p>
+				<p class="user-money">$745.00</p>
+				<!-- /USER INFORMATION -->
+			</div>
+			<!-- /USER QUICKVIEW -->
+		</div>
+		<!-- /SIDE MENU HEADER -->
+
+		<!-- SIDE MENU TITLE -->
+		<p class="side-menu-title">Your Account</p>
+		<!-- /SIDE MENU TITLE -->
+
+		<!-- DROPDOWN -->
+		<ul class="dropdown dark hover-effect interactive">
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-settings.html">
+                    <span class="sl-icon icon-settings"></span>
+                    Account Settings
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-notifications.html">
+                    <span class="sl-icon icon-star"></span>
+                    Notifications
+                </a>
+                <!-- PIN -->
+                <span class="pin soft-edged big primary">49</span>
+                <!-- /PIN -->
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item interactive">
+				<a href="#">
+                    <span class="sl-icon icon-envelope"></span>
+                    Messages
+                    <!-- SVG ARROW -->
+					<svg class="svg-arrow">
+						<use xlink:href="#svg-arrow"></use>
+					</svg>
+					<!-- /SVG ARROW -->
+				</a>
+
+				<!-- INNER DROPDOWN -->
+				<ul class="inner-dropdown">
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox.html">Your Inbox (36)</a>
+						<!-- PIN -->
+						<span class="pin soft-edged secondary">2</span>
+						<!-- /PIN -->
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox-v2.html">Your Inbox (36) V2</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-openmessage.html">Open Message</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox.html">Starred Message</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+
+					<!-- INNER DROPDOWN ITEM -->
+					<li class="inner-dropdown-item">
+						<a href="dashboard-inbox.html">Deleted Messages</a>
+					</li>
+					<!-- /INNER DROPDOWN ITEM -->
+				</ul>
+				<!-- INNER DROPDOWN -->
+
+                <!-- PIN -->
+                <span class="pin soft-edged big secondary">!</span>
+                <!-- /PIN -->
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-purchases.html">
+                    <span class="sl-icon icon-tag"></span>
+                    Your Purchases
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-buycredits.html">
+                    <span class="sl-icon icon-credit-card"></span>
+                    Buy Credits
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+		</ul>
+		<!-- /DROPDOWN -->
+
+        <!-- SIDE MENU TITLE -->
+		<p class="side-menu-title">Info &amp; Statistics</p>
+		<!-- /SIDE MENU TITLE -->
+
+		<!-- DROPDOWN -->
+		<ul class="dropdown dark hover-effect">
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item active">
+				<a href="dashboard-statement.html">
+                    <span class="sl-icon icon-layers"></span>
+                    Sales Statement
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-statistics.html">
+                    <span class="sl-icon icon-chart"></span>
+                    Statistics
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+		</ul>
+		<!-- /DROPDOWN -->
+
+         <!-- SIDE MENU TITLE -->
+		<p class="side-menu-title">Author Tools</p>
+		<!-- /SIDE MENU TITLE -->
+
+		<!-- DROPDOWN -->
+		<ul class="dropdown dark hover-effect">
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-uploaditem.html">
+                    <span class="sl-icon icon-arrow-up-circle"></span>
+                    Upload Item
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+			<!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-manageitems.html">
+                    <span class="sl-icon icon-folder-alt"></span>
+                    Manage Items
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+
+            <!-- DROPDOWN ITEM -->
+			<li class="dropdown-item">
+				<a href="dashboard-withdrawals.html">
+                    <span class="sl-icon icon-wallet"></span>
+                    Withdrawals
+                </a>
+			</li>
+			<!-- /DROPDOWN ITEM -->
+		</ul>
+		<!-- /DROPDOWN -->
+
+        <a href="#" class="button medium secondary">Logout</a>
+	</div>
+	<!-- /SIDE MENU -->
+
+    <!-- DASHBOARD BODY -->
+    <div class="dashboard-body">
+        <!-- DASHBOARD HEADER -->
+        <div class="dashboard-header retracted">
+            <!-- DB CLOSE BUTTON -->
+            <a href="index.html" class="db-close-button">
+               <img src="images/dashboard/back-icon.png" alt="back-icon">
+            </a>
+            <!-- DB CLOSE BUTTON -->
+
+			<!-- DB OPTIONS BUTTON -->
+            <div class="db-options-button">
+               <img src="images/dashboard/db-list-right.png" alt="db-list-right">
+			   <img src="images/dashboard/close-icon.png" alt="close-icon">
+            </div>
+            <!-- DB OPTIONS BUTTON -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item title">
+                <!-- DB SIDE MENU HANDLER -->
+                 <div class="db-side-menu-handler">
+                    <img src="images/dashboard/db-list-left.png" alt="db-list-left">
+                </div>
+                <!-- /DB SIDE MENU HANDLER -->
+                <h6>Your Dashboard</h6>
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+			<!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item form">
+                <form class="dashboard-search">
+                    <input type="text" name="search" id="search_dashboard" placeholder="Search on dashboard...">
+                    <input type="image" src="images/dashboard/search-icon.png" alt="search-icon">
+                </form>
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item stats">
+                <!-- STATS META -->
+                <div class="stats-meta">
+                    <div class="pie-chart pie-chart1">
+                        <!-- SVG PLUS -->
+                        <svg class="svg-plus primary">
+                            <use xlink:href="#svg-plus"></use>
+                        </svg>
+                        <!-- /SVG PLUS -->
+                    </div>
+                    <h6>64.579</h6>
+                    <p>New Original Visits</p>
+                </div>
+                <!-- /STATS META -->
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item stats">
+                <!-- STATS META -->
+                <div class="stats-meta">
+                    <div class="pie-chart pie-chart2">
+                        <!-- SVG PLUS -->
+                        <svg class="svg-minus tertiary">
+                            <use xlink:href="#svg-minus"></use>
+                        </svg>
+                        <!-- /SVG PLUS -->
+                    </div>
+                    <h6>20.8</h6>
+                    <p>Less Sales Than Last Month</p>
+                </div>
+                <!-- /STATS META -->
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+            <!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item stats">
+                <!-- STATS META -->
+                <div class="stats-meta">
+                    <div class="pie-chart pie-chart3">
+                        <!-- SVG PLUS -->
+                        <svg class="svg-plus primary">
+                            <use xlink:href="#svg-plus"></use>
+                        </svg>
+                        <!-- /SVG PLUS -->
+                    </div>
+                    <h6>322k</h6>
+                    <p>Total Visits This Month</p>
+                </div>
+                <!-- /STATS META -->
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+
+			<!-- DASHBOARD HEADER ITEM -->
+            <div class="dashboard-header-item back-button">
+                <a href="index.html" class="button mid dark-light">Back to Homepage</a>
+            </div>
+            <!-- /DASHBOARD HEADER ITEM -->
+        </div>
+        <!-- DASHBOARD HEADER -->
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="dashboard-content">
+            <!-- HEADLINE -->
+            <div class="headline statement primary">
+                <h4>Sales Statement</h4>
+				<a href="#" class="button primary">Download File</a>
+				<button form="statement_filter_form" class="button dark-light">Refine Search</button>
+				<form id="statement_filter_form" name="statement_filter_form" class="statement-form">
+					<!-- DATEPICKER -->
+					<div class="datepicker-wrap">
+						<input type="text" id="date_from" name="date_from" class="datepicker" value="02/22/2016">
+						<span class="icon-calendar"></span>
+					</div>
+					<!-- /DATEPICKER -->
+					<label>to:</label>
+					<!-- DATEPICKER -->
+					<div class="datepicker-wrap">
+						<input type="text" id="date_to" name="date_to" class="datepicker" value="02/22/2017">
+						<span class="icon-calendar"></span>
+					</div>
+					<!-- /DATEPICKER -->
+					<label for="ss_filter" class="select-block">
+						<select name="ss_filter" id="ss_filter">
+							<option value="0">Sales and Purchases</option>
+							<option value="1">Sales</option>
+							<option value="2">Purchases</option>
+						</select>
+						<!-- SVG ARROW -->
+						<svg class="svg-arrow">
+							<use xlink:href="#svg-arrow"></use>
+						</svg>
+						<!-- /SVG ARROW -->
+					</label>
+				</form>
+            </div>
+            <!-- /HEADLINE -->
+
+			<!-- SALE DATA -->
+			<div class="sale-data">
+				<!-- SALE DATA ITEM -->
+				<div class="sale-data-item">
+					<span class="sl-icon icon-present"></span>
+					<p class="text-header big">8.530</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">Products Sold</p>
+						<p>In all Time</p>
+					</div>
+				</div>
+				<!-- /SALE DATA ITEM-->
+
+				<!-- SALE DATA ITEM -->
+				<div class="sale-data-item">
+					<span class="sl-icon icon-present"></span>
+					<p class="text-header big">234</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">Products Sold</p>
+						<p>In this Month</p>
+					</div>
+				</div>
+				<!-- /SALE DATA ITEM-->
+
+				<!-- SALE DATA ITEM -->
+				<div class="sale-data-item">
+					<span class="sl-icon icon-tag"></span>
+					<p class="price big"><span>$</span>12.450</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">Total Sales</p>
+						<p>In all Time</p>
+					</div>
+				</div>
+				<!-- /SALE DATA ITEM-->
+
+				<!-- SALE DATA ITEM -->
+				<div class="sale-data-item">
+					<span class="sl-icon icon-wallet"></span>
+					<p class="price big"><span>$</span>10.630</p>
+					<div class="sale-data-item-info">
+						<p class="text-header">Total Earnings</p>
+						<p>In all Time</p>
+					</div>
+				</div>
+				<!-- /SALE DATA ITEM-->
+			</div>
+			<!-- /SALE DATA -->
+
+			<!-- TRANSACTION LIST -->
+			<div class="transaction-list">
+				<!-- TRANSACTION LIST HEADER -->
+				<div class="transaction-list-header">
+					<div class="transaction-list-header-date">
+						<p class="text-header small">Date</p>
+					</div>
+					<div class="transaction-list-header-author">
+						<p class="text-header small">Author</p>
+					</div>
+					<div class="transaction-list-header-item">
+						<p class="text-header small">Item</p>
+					</div>
+					<div class="transaction-list-header-detail">
+						<p class="text-header small">Detail</p>
+					</div>
+					<div class="transaction-list-header-code">
+						<p class="text-header small">Code</p>
+					</div>
+					<div class="transaction-list-header-price">
+						<p class="text-header small">Price</p>
+					</div>
+					<div class="transaction-list-header-cut">
+						<p class="text-header small">Your Cut</p>
+					</div>
+					<div class="transaction-list-header-earnings">
+						<p class="text-header small">Earnings</p>
+					</div>
+					<div class="transaction-list-header-icon"></div>
+				</div>
+				<!-- /TRANSACTION LIST HEADER -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 12th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Sarah-Imaginarium</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Westeros Custom Clothing</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED3546</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 10th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Thomas_Ket</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Saint Patricks Flyer Template</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4536</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 6</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 3</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 7th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Marina Strange</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Flatland - Hero Image Composer</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED3546</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 6th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Sarah-Imaginarium</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Westeros Custom Clothing</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4536</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 6th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Odin Design</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Miniverse - Hero Image Composer</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Purchase</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4523</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">-</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">- $ 12</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon tertiary">
+							<!-- SVG MINUS -->
+							<svg class="svg-minus">
+								<use xlink:href="#svg-minus"></use>
+							</svg>
+							<!-- /SVG MINUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 5th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">GamePix</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Westeros Custom Clothing</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4536</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 2nd, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Marina Strange</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category secondary"><a href="#">Professional Corporate Logos</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Purchase</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED2523</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 260</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">-</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">- $ 260</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon tertiary">
+							<!-- SVG MINUS -->
+							<svg class="svg-minus">
+								<use xlink:href="#svg-minus"></use>
+							</svg>
+							<!-- /SVG MINUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Dec 1st, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Fenix Themes</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Red Samurai - Sushi Delivery</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4536</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 16</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 8</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Nov 29th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Sarah-Imaginarium</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Westeros Custom Clothing</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED3546</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Nov 28th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Thomas_Ket</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Saint Patricks Flyer Template</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4536</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 6</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 3</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Nov 28th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Marina Strange</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Flatland - Hero Image Composer</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED3546</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- TRANSACTION LIST ITEM -->
+				<div class="transaction-list-item">
+					<div class="transaction-list-item-date">
+						<p>Nov 24th, 2014</p>
+					</div>
+					<div class="transaction-list-item-author">
+						<p class="text-header"><a href="#">Sarah-Imaginarium</a></p>
+					</div>
+					<div class="transaction-list-item-item">
+						<p class="category primary"><a href="#">Westeros Custom Clothing</a></p>
+					</div>
+					<div class="transaction-list-item-detail">
+						<p>Sale</p>
+					</div>
+					<div class="transaction-list-item-code">
+						<p><span class="light">ED4536</span></p>
+					</div>
+					<div class="transaction-list-item-price">
+						<p>$ 12</p>
+					</div>
+					<div class="transaction-list-item-cut">
+						<p><span class="light">50%</span></p>
+					</div>
+					<div class="transaction-list-item-earnings">
+						<p class="text-header">$ 6</p>
+					</div>
+					<div class="transaction-list-item-icon">
+						<div class="transaction-icon primary">
+							<!-- SVG PLUS -->
+							<svg class="svg-plus">
+								<use xlink:href="#svg-plus"></use>
+							</svg>
+							<!-- /SVG PLUS -->
+						</div>
+					</div>
+				</div>
+				<!-- /TRANSACTION LIST ITEM -->
+
+				<!-- PAGER -->
+				<div class="pager-wrap">
+					<div class="pager primary">
+						<div class="pager-item"><p>1</p></div>
+						<div class="pager-item active"><p>2</p></div>
+						<div class="pager-item"><p>3</p></div>
+						<div class="pager-item"><p>...</p></div>
+						<div class="pager-item"><p>17</p></div>
+					</div>
+				</div>
+				<!-- /PAGER -->
+			</div>
+			<!-- /TRANSACTION LIST -->
+        </div>
+        <!-- DASHBOARD CONTENT -->
+    </div>
+    <!-- /DASHBOARD BODY -->
+
+	<div class="shadow-film closed"></div>
+
+<!-- SVG ARROW -->
+<svg style="display: none;">	
+	<symbol id="svg-arrow" viewBox="0 0 3.923 6.64014" preserveAspectRatio="xMinYMin meet">
+		<path d="M3.711,2.92L0.994,0.202c-0.215-0.213-0.562-0.213-0.776,0c-0.215,0.215-0.215,0.562,0,0.777l2.329,2.329
+			L0.217,5.638c-0.215,0.215-0.214,0.562,0,0.776c0.214,0.214,0.562,0.215,0.776,0l2.717-2.718C3.925,3.482,3.925,3.135,3.711,2.92z"/>
+	</symbol>
+</svg>
+<!-- /SVG ARROW -->
+
+<!-- SVG PLUS -->
+<svg style="display: none;">
+	<symbol id="svg-plus" viewBox="0 0 13 13" preserveAspectRatio="xMinYMin meet">
+		<rect x="5" width="3" height="13"/>
+		<rect y="5" width="13" height="3"/>
+	</symbol>
+</svg>
+<!-- /SVG PLUS -->
+
+<!-- SVG MINUS -->
+<svg style="display: none;">
+	<symbol id="svg-minus" viewBox="0 0 13 13" preserveAspectRatio="xMinYMin meet">
+		<rect y="5" width="13" height="3"/>
+	</symbol>
+</svg>
+<!-- /SVG MINUS -->
+
+<!-- jQuery -->
+<script src="js/vendor/jquery-3.1.0.min.js"></script>
+<!-- XM Pie Chart -->
+<script src="js/vendor/jquery.xmpiechart.min.js"></script>
+<!-- Bootstrap Datepicker -->
+<script src="js/vendor/bootstrap-datepicker.min.js"></script>
+<!-- Side Menu -->
+<script src="js/side-menu.js"></script>
+<!-- Dashboard Header -->
+<script src="js/dashboard-header.js"></script>
+<!-- Dashboard Statement -->
+<script src="js/dashboard-statement.js"></script>
+</body>
+
+<!-- Mirrored from odindesign-themes.com/emerald-dragon/dashboard-statement.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Aug 2018 10:40:01 GMT -->
+</html>

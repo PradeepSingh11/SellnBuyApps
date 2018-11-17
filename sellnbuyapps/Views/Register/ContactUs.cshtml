@@ -1,0 +1,128 @@
+﻿@model sellnbuyapps.Models.ContactUs
+
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Contact Us</h2>
+    </div>
+</div>
+<div class="section-wrap">
+    <div class="section">
+        <div align="center" style="margin-bottom:10px;">
+            @if (ViewBag.Message == "We will contact with you shortly")
+            {
+                <span style="color:green;">@ViewBag.Message</span>
+            }
+            else
+            {
+                <span style="color:red;">@ViewBag.Message</span>
+            }
+        </div>
+        <div class="section demo">
+            <div class="form-popup">
+                <div class="form-popup-content">
+                    <h4 class="popup-title">Contact Us</h4>
+                    <!-- LINE SEPARATOR -->
+                    <hr class="line-separator">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "rl-label" })
+
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @style = "color:red" })
+
+                        @Html.LabelFor(model => model.EmailId, htmlAttributes: new { @class = "rl-label" })
+
+                        @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EmailId, "", new { @style = "color:red" })
+
+                        @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "rl-label" })
+
+                        @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Subject, "", new { @style = "color:red" })
+
+                        @Html.LabelFor(model => model.Comments, htmlAttributes: new { @class = "rl-label" })
+
+                        @Html.TextAreaFor(model => model.Comments, new { htmlAttributes = new { @class = "form-control", @style = "Resize:none;" } })
+                        @Html.ValidationMessageFor(model => model.Comments, "", new { @style = "color:red" })
+
+                        <span>
+                            <button class="button mid dark" style="margin: 5px 0 10px 0;">
+                                Submit <span class="primary">Now!</span>
+                            </button>
+                        </span>
+                        <hr class="line-separator double">
+                        
+                    }
+                </div>
+
+            </div>
+            <div class="form-popup">
+
+                <!-- FORM POPUP CONTENT -->
+                <div class="form-popup-content">
+                    <h4 class="popup-title">Address</h4>
+                    <hr class="line-separator">
+                    <div class="topic-preview">
+                        <!-- TOPIC PREVIEW ITEM -->
+                        <div class="topic-preview-item">
+
+                            <p class="category primary" style="font-size: 15px;color: dimgray;">
+
+                                11938 Bridgeport Road Richmond<br /><br />
+                                BC V6X1T2<br /><br />
+                                Vancouver ,Canada<br /><br />
+                                info@starappsolutions.ca<br /><br />
+
+                            </p>
+                        </div>
+
+                        <div class="topic-preview-item">
+                            <p class="category primary" style="font-size: 15px;color: dimgray;">
+                                STAR APP SOLUTIONS<br /><br />
+                                Jaggi Colony, Phase-1, Ambala City (Ambala),<br /><br />
+                                Haryana – 136128<br /><br />
+                            </p>
+                        </div>
+                        <div class="topic-preview-item">
+
+                            <p class="category primary" style="font-size: 15px;color: dimgray;">
+                                STAR APP SOLUTIONS<br /><br />
+                                Ist Floor, Near Hanuman Mandir,<br /><br />
+                                Main Chowk Pehowa (Kurukshetra)<br /><br />
+                                Haryana – 136128<br /><br />
+                            </p>
+                        </div>
+                        <div class="topic-preview-item">
+
+                            <p class="category primary" style="font-size: 15px;color: dimgray;">
+                                Phone:
+
+                                +91-8398849174, +91-7988742282<br /><br />
+
+                                Email:
+
+                                info@starappsolutions.com<br />
+                            </p>
+
+                        </div>
+                        <!-- /TOPIC PREVIEW ITEM -->
+                    </div>
+                </div>
+                <!-- /FORM POPUP CONTENT -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}

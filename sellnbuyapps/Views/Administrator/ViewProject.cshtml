@@ -1,0 +1,73 @@
+﻿@model sellnbuyapps.Models.sbProjectDetailsService
+
+@{
+    ViewBag.Title = "ViewProject";
+    Layout = "~/Views/Shared/_AdminMasterPage.cshtml";
+}
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Project Detail</h2>
+    </div>
+</div>
+
+<div class="section-wrap">
+    <div class="section">
+        <article class="post blog-post">
+            <div class="post-image">
+                <figure class="product-preview-image large liquid">
+                    <img src="@Model.Screenshot" alt="" style="width: 838px;height: 486px;">
+                </figure>
+            </div>
+            <div class="post-content with-title">
+                <p class="text-header big">@Model.ProjectName</p>
+                <div class="meta-line" style="padding: 15px 0 15px 0;">
+                    <p class="category primary" style="font-size: 20px;">@Model.TechnologyName</p>
+                    <div class="metadata">
+                        <div class="meta-item">
+                            <p class="text-header" style="font-size: 15px;">@Model.ProjectCategory</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 25px;margin: 0 125px 0 0;"><span>$</span>@Model.Cost</p>
+                </div>
+                <div class="post-paragraph">
+                    <h3 class="post-title">Features</h3>
+                    <p>@Model.Features</p>
+                </div>
+                <div class="post-paragraph">
+                    <h3 class="post-title">Description</h3>
+                    <p>@Model.Description</p>
+                </div>
+                <div class="post-paragraph half">
+                    <h3 class="post-title small">Extra Features</h3>
+                    <ul class="post-item-list">
+                        <li>
+                            <p>@Html.DisplayFor(model => model.Demo)</p>
+                            <p class="text-header" style="margin: -15px 0 0 23px;">Demo Available</p>
+                        </li>
+
+                        <li>
+                            <p>@Html.DisplayFor(model => model.IsFree)</p>
+                            <p class="text-header" style="margin: -15px 0 0 23px;">Is Free</p>
+                        </li>
+
+                        <li>
+                            <p>@Html.DisplayFor(model => model.IsCustomizable)</p>
+                            <p class="text-header" style="margin: -15px 0 0 23px;">Is Customizable</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="line-separator">
+        </article>
+        <div class="blog-author">
+            <figure class="user-avatar medium liquid">
+                <img src="@Model.CreatedByProfilePicture" alt="" style="height: 100px; width: 100px; margin: -20px 0px 0px -20px;">
+            </figure>
+            <p class="text-header">@Model.CreatedByFirstName @Model.CreatedByLastName</p>
+            <p class="timestamp">Post Author</p>
+        </div>
+        <span>
+            <input id="BtnTest1" type="button" value="Back" style="margin: 10px 0 0 0; width: 10%;" class="button mid dark" onclick="window.location.href = '/Administrator/AllProjects'" />
+        </span>
+    </div>
+</div>

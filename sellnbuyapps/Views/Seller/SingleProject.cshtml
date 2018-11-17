@@ -1,0 +1,94 @@
+﻿@model sellnbuyapps.Models.Home
+
+@{
+    ViewBag.Title = "SingleProject";
+    Layout = "~/Views/Shared/_SellerDashboard.cshtml";
+}
+
+<div class="section-wrap">
+    <div class="section">
+        <!-- SIDEBAR -->
+        <div class="sidebar right">
+            <!-- SIDEBAR ITEM -->
+            <div class="sidebar-item">
+                <p class="price large"><span>$</span>@Model.cost</p>
+                <hr class="line-separator">
+                <a href="#" class="button mid dark spaced"><span class="primary">Purchase Now!</span></a>
+                <a href="@Url.Action("Buy", "Cart", new { Id = Model.Id })" class="button mid primary">Add to Cart</a>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /SIDEBAR ITEM -->
+            <!-- SIDEBAR ITEM -->
+            <div class="sidebar-item author-bio">
+                <h4>Product Author</h4>
+                <hr class="line-separator">
+                <!-- USER AVATAR -->
+                <a class="user-avatar-wrap medium">
+                    <figure class="user-avatar medium">
+                        <img src=@Model.profilepicture alt="profile-picture">
+                    </figure>
+                </a>
+                <!-- /USER AVATAR -->
+                <p class="text-header">@Model.authorfirstname @Model.authorlastname</p>
+
+            </div>
+
+        </div>
+        <!-- /SIDEBAR -->
+
+        <div class="content left">
+            <!-- POST -->
+            <article class="post">
+                <!-- POST IMAGE -->
+                <div style="margin-right:83%;">
+                    <!-- POST PARAGRAPH -->
+                    <h3 class="post-title" style="width:800px;text-align:left;">@Model.projectname</h3>
+                    <br />
+                </div>
+                <div class="clearfix"></div>
+                <!-- /Post Name-->
+                <!-- POST IMAGE -->
+                <div class="post-image">
+                    <figure class="product-preview-image large liquid">
+                        <img src="@Model.screenshot" alt="">
+                    </figure>
+
+                    @*<a href="#" class="button mid primary">Go to Live Demo</a>*@
+                </div>
+                <!-- /POST IMAGE -->
+                <div class="clearfix"></div>
+                <hr class="line-separator">
+                <!-- POST CONTENT -->
+                <div class="post-content">
+                    <!-- POST PARAGRAPH -->
+                    <div class="post-paragraph">
+                        <h3 class="post-title">Features:</h3>
+                        <p>@Model.features</p>
+
+                    </div>
+                    <!-- /POST PARAGRAPH -->
+                    <!-- POST PARAGRAPH -->
+                    <div class="post-paragraph">
+                        <h3 class="post-title small">Description:</h3>
+                        <p>@Model.description</p>
+                    </div>
+                    <!-- /POST PARAGRAPH -->
+                    <!-- POST PARAGRAPH -->
+                    <div class="post-paragraph half">
+                        <h3 class="post-title small">Technology Used:</h3>
+                        <!-- POST ITEM LIST -->
+                        <p>@Model.technologyname</p>
+                        <!-- POST ITEM LIST -->
+                    </div>
+                    <!-- /POST PARAGRAPH -->
+                    <!-- POST PARAGRAPH -->
+
+                    <div class="clearfix"></div>
+                </div>
+
+
+            </article>
+
+        </div>
+    </div>
+</div>
